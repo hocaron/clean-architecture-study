@@ -6,6 +6,7 @@ import lombok.Value;
 import javax.validation.constraints.NotNull;
 
 import com.cleanarchitecture.buckpal.account.domain.Account;
+import com.cleanarchitecture.buckpal.account.domain.Account.AccountId;
 import com.cleanarchitecture.buckpal.account.domain.Money;
 import com.cleanarchitecture.buckpal.common.SelfValidating;
 
@@ -15,17 +16,17 @@ public
 class SendMoneyCommand extends SelfValidating<SendMoneyCommand> {
 
 	@NotNull
-	private final Account.AccountId sourceAccountId;
+	private final AccountId sourceAccountId;
 
 	@NotNull
-	private final Account.AccountId targetAccountId;
+	private final AccountId targetAccountId;
 
 	@NotNull
 	private final Money money;
 
 	public SendMoneyCommand(
-		Account.AccountId sourceAccountId,
-		Account.AccountId targetAccountId,
+		AccountId sourceAccountId,
+		AccountId targetAccountId,
 		Money money) {
 		this.sourceAccountId = sourceAccountId;
 		this.targetAccountId = targetAccountId;

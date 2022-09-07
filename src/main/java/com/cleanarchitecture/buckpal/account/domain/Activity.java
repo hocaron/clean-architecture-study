@@ -2,6 +2,8 @@ package com.cleanarchitecture.buckpal.account.domain;
 
 import java.time.LocalDateTime;
 
+import com.cleanarchitecture.buckpal.account.domain.Account.AccountId;
+
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
@@ -22,21 +24,21 @@ public class Activity {
 	 */
 	@Getter
 	@NonNull
-	private final Account.AccountId ownerAccountId;
+	private final AccountId ownerAccountId;
 
 	/**
 	 * The debited account.
 	 */
 	@Getter
 	@NonNull
-	private final Account.AccountId sourceAccountId;
+	private final AccountId sourceAccountId;
 
 	/**
 	 * The credited account.
 	 */
 	@Getter
 	@NonNull
-	private final Account.AccountId targetAccountId;
+	private final AccountId targetAccountId;
 
 	/**
 	 * The timestamp of the activity.
@@ -53,9 +55,9 @@ public class Activity {
 	private final Money money;
 
 	public Activity(
-		@NonNull Account.AccountId ownerAccountId,
-		@NonNull Account.AccountId sourceAccountId,
-		@NonNull Account.AccountId targetAccountId,
+		@NonNull AccountId ownerAccountId,
+		@NonNull AccountId sourceAccountId,
+		@NonNull AccountId targetAccountId,
 		@NonNull LocalDateTime timestamp,
 		@NonNull Money money) {
 		this.id = null;

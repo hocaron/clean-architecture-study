@@ -1,10 +1,10 @@
 package com.cleanarchitecture.buckpal.account.application.port.out;
 
-import com.cleanarchitecture.buckpal.account.domain.Account;
+import com.cleanarchitecture.buckpal.account.domain.Account.AccountId;
 
 public interface AccountLock {
 
-	void lockAccount(Account.AccountId accountId);
+	void lockAccount(AccountId accountId);
 
-	void releaseAccount(Account.AccountId accountId);
+	void releaseAccount(AccountId accountId);
 }
