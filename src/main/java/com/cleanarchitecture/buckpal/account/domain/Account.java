@@ -20,7 +20,6 @@ public class Account {
 	/**
 	 * The unique ID of the account.
 	 */
-	@Getter
 	private final AccountId id;
 
 	/**
