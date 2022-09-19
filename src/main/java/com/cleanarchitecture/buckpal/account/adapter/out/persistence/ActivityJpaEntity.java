@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-class ActivityJpaEntity {
+public class ActivityJpaEntity {
 
 	@Id
 	@GeneratedValue

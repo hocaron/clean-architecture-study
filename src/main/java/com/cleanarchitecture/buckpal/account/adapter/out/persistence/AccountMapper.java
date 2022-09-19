@@ -13,7 +13,7 @@ import com.cleanarchitecture.buckpal.account.domain.ActivityWindow;
 import com.cleanarchitecture.buckpal.account.domain.Money;
 
 @Component
-class AccountMapper {
+public class AccountMapper {
 
 	Account mapToDomainEntity(
 		AccountJpaEntity account,
