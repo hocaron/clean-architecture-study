@@ -15,12 +15,12 @@ import lombok.RequiredArgsConstructor;
 @WebAdapter
 @RestController
 @RequiredArgsConstructor
-class SendMoneyController {
+public class SendMoneyController {
 
 	private final SendMoneyUseCase sendMoneyUseCase;
 
 	@PostMapping(path = "/accounts/send/{sourceAccountId}/{targetAccountId}/{amount}")
-	void sendMoney(
+	public void sendMoney(
 		@PathVariable("sourceAccountId") Long sourceAccountId,
 		@PathVariable("targetAccountId") Long targetAccountId,
 		@PathVariable("amount") Long amount) {
